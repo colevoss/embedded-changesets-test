@@ -39,7 +39,9 @@ jobs:
 
         # @see https://github.com/changesets/action?tab=readme-ov-file#inputs
         with:
-          # cwd: ./my-package
+          # This action seems to not respect the working-directroy so `cwd` needs
+          # to be set to the sub directory of the package
+          cwd: ./my-package
           title: My Package Release
           commit: My Package Release Commit
         env:
