@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'my-package/**'
+      - '.github/workflows/changeset.yml'
       
 defaults:
   run:
