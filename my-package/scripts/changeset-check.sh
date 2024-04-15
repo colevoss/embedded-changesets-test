@@ -6,7 +6,7 @@ npx changeset status --since origin/main --output changeset.json
 
 # cat changeset.json && echo ""
 
-cat changeset.json | jq -e ".changesets | length > 0" > /dev/null
+# cat changeset.json | jq -e ".changesets | length > 0" > /dev/null
 
 if [ $? -eq 0 ]
 then

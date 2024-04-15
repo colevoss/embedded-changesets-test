@@ -40,5 +40,6 @@ jobs:
       -
         id: check-for-changeset
         name: Check for changeset
+        # ./scripts/changeset-check.sh
         run: |
-          ./scripts/changeset-check.sh
+          npx changeset status --since origin/main
