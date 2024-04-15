@@ -1,5 +1,11 @@
 # my-package
 
+## 1.0.3
+
+### Patch Changes
+
+- e3adbb6: my test
+
 ## 1.0.2
 
 ### Patch Changes
