@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Testing!\""
+    "test": "echo \"Testing!\"",
+    "change": "npx changeset",
+    "change:empty": "npx changeset --empty"
   },
   "keywords": [],
   "author": "",
