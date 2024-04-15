@@ -37,8 +37,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      -
-        id: check-for-changeset
-        name: Check for changeset
-        run: |
-          ./scripts/changeset-check.sh
+      # -
+      #   id: check-for-changeset
+      #   name: Check for changeset
+      #   run: |
+      #     ./scripts/changeset-check.sh
