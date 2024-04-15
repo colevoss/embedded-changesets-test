@@ -1,0 +1,44 @@
+name: "PR Workflow"
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'my-package/**'
+      - '.github/workflows/pr.yml'
+
+defaults:
+  run:
+    working-directory: ./my-package
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      -
+        id: check-for-changeset
+        name: Check for changeset
+        run: |
+          ./scripts/changeset-check.sh
