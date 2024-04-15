@@ -31,5 +31,7 @@ jobs:
         uses: changesets/action@v1
         with:
           cwd: ./my-package
+          title: My Package Release
+          commit: My Package Release Commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
