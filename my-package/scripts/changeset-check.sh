@@ -2,7 +2,7 @@
 
 echo "Checking .changesets for changes since main..."
 # npx changeset status --output changeset.json
-npx changeset status --since main --output changeset.json
+npx changeset status --since origin/main --output changeset.json
 
 # cat changeset.json && echo ""
 
