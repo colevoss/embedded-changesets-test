@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Testing!\""
+    "test": "echo \"Testing!\"",
+    "changeset:status:new": "changeset status --since main --output changeset.json",
+    "changeset:check": "cat changeset.json | jq \".changesets | length > 0\""
   },
   "keywords": [],
   "author": "",
